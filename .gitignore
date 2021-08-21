@@ -1,2 +1,3 @@
 # for vim-plug
-/plug/
+/plug/*
+!/plug/.gitkeep
