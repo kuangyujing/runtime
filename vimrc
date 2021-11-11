@@ -12,7 +12,7 @@ set smartindent
 set breakindent
 set cindent
 set cinoptions=+2,t0,l1,j1,J1 "(s,L0
-set formatoptions=tcroqnblmM1j
+set formatoptions=tcroqnblmM1j "'
 set autoread
 set cmdheight=1
 set scrolloff=2
@@ -78,7 +78,7 @@ call plug#begin("/usr/share/vim/plug")
  Plug 'luochen1990/rainbow'
  Plug 'machakann/vim-highlightedyank'
  " web
- Plug 'kuangyujing/html5.vim',{'for':['html','javascript']}
+ Plug 'kuangyujing/html5.vim',{'for':['html','javascript','css']}
  " javascript
  Plug 'pangloss/vim-javascript',{'for':['html','javascript']}
  Plug 'othree/yajs.vim',{'for':['html','javascript']}
@@ -93,6 +93,13 @@ call plug#begin("/usr/share/vim/plug")
  " git
  Plug 'tpope/vim-fugitive'
  Plug 'airblade/vim-gitgutter'
+ " typescript
+ Plug 'pangloss/vim-javascript'
+ Plug 'leafgarland/typescript-vim'
+ " jsx, tsx
+ Plug 'maxmellon/vim-jsx-pretty'
+ " graphql
+ Plug 'jparise/vim-graphql'
  " ejs, jst
  Plug 'briancollins/vim-jst',{'for':['ejs','jst']}
  " colorscheme

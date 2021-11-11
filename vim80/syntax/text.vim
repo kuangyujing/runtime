@@ -11,8 +11,10 @@ endif
 syntax match Identifier '^\s*[\-+*]'
 syntax match Comment '\<\@<!#.*$'
 
-syntax match Todo '\<TODO\|FIXME\|XXX\>'
-syntax match Error '\<XXX\>'
+syntax match Todo '\<TODO\>'
+syntax match Error '\<FIXME\>'
+syntax match SpellBad '\<XXX\>'
+syntax match Special '\<DONE\>'
 
 let b:current_syntax = 'text'
 
