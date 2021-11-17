@@ -1,5 +1,6 @@
 set nocompatible
-set ambiwidth=single "listchars, fillchars
+"set ambiwidth=single "listchars, fillchars
+set ambiwidth=double
 set backspace=indent
 set ttyfast
 set tabstop=4
@@ -23,8 +24,10 @@ set fileencodings=ucs-bom,utf-8,iso-2022-jp,euc-jp,sjis,default,latin1
 set fileformat=unix
 set fileformats=unix,dos,mac
 set matchpairs=(:),{:},[:],<:>,=:;
-set listchars=trail:.,extends:»,precedes:«,tab:ǀ\  "'
-set fillchars=vert:\  "'
+"set listchars=trail:.,extends:»,precedes:«,tab:ǀ\  "'
+set listchars=
+"set fillchars=vert:\  "'
+set fillchars=
 set list
 set hlsearch
 set incsearch

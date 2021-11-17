@@ -13,7 +13,6 @@ syntax match comment '\<\@<!#.*$'
 
 syntax match type '\<TODO\>'
 syntax match todo '\<FIXME\>'
-syntax match special '\<DONE\>'
 syntax match error '\<XXX\>'
 
 let b:current_syntax = 'text'
