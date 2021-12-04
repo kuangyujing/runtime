@@ -1,6 +1,5 @@
 set nocompatible
-"set ambiwidth=single "listchars, fillchars
-set ambiwidth=double
+set ambiwidth=single "listchars, fillchars
 set backspace=indent
 set ttyfast
 set tabstop=4
@@ -24,9 +23,9 @@ set fileencodings=ucs-bom,utf-8,iso-2022-jp,euc-jp,sjis,default,latin1
 set fileformat=unix
 set fileformats=unix,dos,mac
 set matchpairs=(:),{:},[:],<:>,=:;
-"set listchars=trail:.,extends:»,precedes:«,tab:ǀ\  "'
+set listchars=trail:.,extends:»,precedes:«,tab:ǀ\  "'
 set listchars=
-"set fillchars=vert:\  "'
+set fillchars=vert:\  "'
 set fillchars=
 set list
 set hlsearch
@@ -41,7 +40,7 @@ set wildmenu
 set number
 set wrap
 set nofoldenable
-set mouse=nv
+set mouse=n
 set timeoutlen=10
 set nocursorline "fix for slow scrolling
 set background=dark
@@ -50,16 +49,18 @@ noremap <silent> <s-q> <nop>
 nnoremap <silent> <tab> <c-w>w
 nnoremap <silent> <s-tab> <c-w>W
 filetype plugin indent on
+command W w!
+command Q q!
 autocmd BufEnter * if &filetype == '' | setlocal filetype=text | endif
 autocmd InsertLeave * call system('fcitx-remote -c')
 autocmd VimLeave * call system('xsel -ib', getreg('+'))
 autocmd ColorScheme * call onedark#set_highlight
-            \ ('normal',{'fg':{'gui':'#efefef','cterm':'255','cterm16':'15'}})
+\ ('normal',{'fg':{'gui':'#efefef','cterm':'255','cterm16':'15'}})
 autocmd ColorScheme * call onedark#set_highlight
-            \ ('linenr',{'fg':{'gui':'#e5c07b','cterm':'180','cterm16':'3'}})
+\ ('linenr',{'fg':{'gui':'#e5c07b','cterm':'180','cterm16':'3'}})
 autocmd ColorScheme * call onedark#set_highlight
-            \ ('visual',{'fg':{'gui':'#ffffff','cterm':'15','cterm16':'15'},
-            \  'bg':{'gui':'#ff5f5f','cterm':'203','cterm16':'9'}})
+\ ('visual',{'fg':{'gui':'#ffffff','cterm':'15','cterm16':'15'},
+\  'bg':{'gui':'#ff5f5f','cterm':'203','cterm16':'9'}})
 let g:skip_defaults_vim=1 "disable defaults.vim
 let g:html_indent_style1='inc' "fix style tag indent
 let g:html_indent_script1='inc' "fix script tag indent
@@ -72,7 +73,7 @@ let g:vim_markdown_conceal=0
 let g:vim_markdown_conceal_code_blocks=0
 let g:onedark_hide_endofbuffer=1
 let g:onedark_termcolors=256
-let g:highlightedyank_highlight_duration=200
+let g:highlightedyank_highlight_duration=128
 call plug#begin("/usr/share/vim/plug")
  " basics
  Plug 'itchyny/lightline.vim'
