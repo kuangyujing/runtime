@@ -8,7 +8,7 @@ endif
 
 "syntax match Label '\<\u\i\+'
 "syntax match Constant '\<\d\+\>'
-syntax match identifier '^\s*[\-+*>]'
+syntax match identifier '^\s*[\-*>]'
 syntax match comment '\<\@<!#.*$'
 
 syntax match type '\<TODO\>'

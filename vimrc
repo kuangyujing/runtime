@@ -40,7 +40,7 @@ set wildmenu
 set number
 set wrap
 set nofoldenable
-set mouse=n
+set mouse=a
 set timeoutlen=10
 set nocursorline "fix for slow scrolling
 set background=dark
@@ -81,6 +81,7 @@ call plug#begin("/usr/share/vim/plug")
  Plug 'jiangmiao/auto-pairs'
  Plug 'luochen1990/rainbow'
  Plug 'machakann/vim-highlightedyank'
+ Plug 'tpope/vim-sleuth'
  " web
  Plug 'kuangyujing/html5.vim',{'for':['html','javascript','css']}
  " javascript
@@ -109,5 +110,6 @@ call plug#begin("/usr/share/vim/plug")
  " colorscheme
  Plug 'joshdick/onedark.vim'
 call plug#end() " + syntax enable
+command Sync Git add -A | Git commit -m update | Git push
 colorscheme onedark
 highlight HighlightedyankRegion ctermfg=15 ctermbg=203
